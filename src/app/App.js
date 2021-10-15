@@ -1,35 +1,28 @@
 // React
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-// Contexts
-import { ColorThemeProvider } from 'contexts/ColorThemeContext';
-
-// Components
-import LayoutComponent from 'app/components/Layout';
-
-// Screens
-import AboutScreen from 'app/screens/About';
-import HomeScreen from 'app/screens/Home';
-import NotFoundScreen from 'app/screens/NotFound';
 
 // Component Styling
 import './App.scss';
+import { ThemeProvider } from "@material-ui/core";
+import { theme } from "./contexts/ColorThemeContext.js";
 
-const App = () => {
+import Header from './components/Header.js';
+import Feed from './components/Feed.js';
+
+function App() {
   return (
-    <ColorThemeProvider>
-      <Router>
-        <LayoutComponent>
-          <Switch>
-            <Route component={HomeScreen} path='/' exact />
-            <Route component={AboutScreen} path='/about' exact />
-            <Route component={NotFoundScreen} />
-          </Switch>
-        </LayoutComponent>
-      </Router>
-    </ColorThemeProvider>
-  );
-};
+    <>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Header />
+        </div>
+
+        <div>
+          <Feed />
+        </div>
+      </ThemeProvider>
+    </>
+    );
+  }
 
 export default App;
