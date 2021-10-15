@@ -1,6 +1,11 @@
 // React
 import React from "react";
-import { makeStyles } from "@mui/styles";
+
+// Material
+import { Container } from "@mui/material";
+
+// Styles
+import HomeStyles from "./Home.style";
 
 // Components
 import AnnouncementsComponent from "app/components/Announcements";
@@ -9,28 +14,14 @@ import ListMembersComponent from "app/components/ListMembers";
 import CalendarComponent from "app/components/Calendar";
 import ChartsComponent from "app/components/Charts";
 
-const styles = makeStyles((theme) => ({
-  gridContainer: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr",
-    gridGap: theme.spacing(2),
-  },
-  componentContainer: {
-    backgroundColor: theme.palette.primary.main,
-  },
-  memberFeedContainer: {
-    gridRow: 2,
-    backgroundColor: theme.palette.primary.main,
-  },
-}));
-
 const HomeScreen = () => {
-  const { gridContainer, componentContainer, memberFeedContainer } = styles();
+  const { gridContainer, componentContainer, memberFeedContainer } =
+    HomeStyles();
+
   return (
-    <div className='test'>
-      <div>This is the home screen!</div>
-      <div className={gridContainer}>
-        <div className={memberFeedContainer}>
+    <div className="test">
+      <Container className={gridContainer} maxWidth="lg">
+        <div className={`${componentContainer} ${memberFeedContainer}`}>
           <MemberFeedComponent />
         </div>
         <div className={componentContainer}>
@@ -45,7 +36,7 @@ const HomeScreen = () => {
         <div className={componentContainer}>
           <ChartsComponent />
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
