@@ -46,5 +46,33 @@ const ColorThemeProvider = ({ children }) => {
   );
 };
 
+export const theme = createTheme ({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#FAFAFA',
+    },
+    secondary: {
+      main: '#00B6AD',
+    },
+    warning: {
+      main: '#ff9800',
+    },
+    info: {
+      main: '#A23F97',
+    },
+    success: {
+      main: '#00B6AD',
+    },
+    text: {
+      primary: '#005395',
+      secondary: '#065faa',
+    },
+  },
+  typography: {
+    fontFamily: 'Inter',
+  },
+});
+
 export { ColorThemeProvider };
 export default ColorThemeContext;
