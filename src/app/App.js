@@ -24,35 +24,32 @@ import ProjectInformationScreen from "app/screens/ProjectInformation";
 // Component Styling
 import "./App.scss";
 
-import Header from "./components/Header.js";
-import Bucket from "./components/Bucket";
-
 function App() {
   return (
     <ColorThemeProvider>
       <Router>
         <LayoutComponent>
           <Switch>
-            <Route component={HomeScreen} path='/' exact />
-            <Route component={AboutScreen} path='/about' exact />
-            <Route component={ArchiveScreen} path='/archive' exact />
-            <Route component={CalendarScreen} path='/calendar' exact />
-            <Route component={ContributeScreen} path='/contribute' exact />
-            <Route component={CreateEventScreen} path='/create-event' exact />
+            <Route component={HomeScreen} path="/" exact />
+            <Route component={AboutScreen} path="/about" exact />
+            <Route component={ArchiveScreen} path="/archive" exact />
+            <Route component={CalendarScreen} path="/calendar" exact />
+            <Route component={ContributeScreen} path="/contribute" exact />
+            <Route component={CreateEventScreen} path="/create-event" exact />
             <Route
               component={MemberInformationScreen}
-              path='/member-information'
+              path="/member-information"
               exact
             />
-            <Route component={NewPostScreen} path='/new-post' exact />
+            <Route component={NewPostScreen} path="/new-post" exact />
             <Route
               component={NotificationsScreen}
-              path='/notifications'
+              path="/notifications"
               exact
             />
             <Route
               component={ProjectInformationScreen}
-              path='/project-information'
+              path="/project-information"
               exact
             />
             <Route component={NotFoundScreen} />
