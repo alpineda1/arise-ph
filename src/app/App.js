@@ -3,11 +3,11 @@ import React from 'react';
 
 // Component Styling
 import './App.scss';
-import { ThemeProvider } from "@material-ui/core";
+import { Container, ThemeProvider } from "@material-ui/core";
 import { theme } from "./contexts/ColorThemeContext.js";
 
 import Header from './components/Header.js';
-import Feed from './components/Feed.js';
+import Bucket from './components/Bucket';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         </div>
 
         <div>
-          <Feed />
+          <Bucket />
         </div>
       </ThemeProvider>
     </>
