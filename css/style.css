@@ -59,7 +59,7 @@ h6{
 }
 
 section{
-    padding: 1em;
+    padding: 2em 1em;
     margin: 1em;
     border-bottom-style: dashed;
     border-bottom-color: rgb(0, 77, 142);
@@ -113,8 +113,14 @@ hr {
     opacity: 1;  
 }
 
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 95%;
+}
 
-/* Projects
+
+/* Projects Summary
 ---------------------------------------*/
 
 .projects{
@@ -335,4 +341,11 @@ footer links{
 footer img{
     width: 30px;
     height: 30px;
+}
+
+footer img:hover{
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
