@@ -25,7 +25,9 @@ function Header() {
                     <img src="./img/arise-logo.png" alt="arise-logo"/>
                 </div>         */}
           <Typography App-header> ARISE.PH </Typography>
-
+          <Button variant='text' color='inherit'>
+            Login
+          </Button>
           <Button variant='text' color='inherit'>
             Home
           </Button>

@@ -10,11 +10,14 @@ import { Box, Button } from "@mui/material";
 
 const LayoutComponent = ({ children }) => {
   // Styles
-  // const { childrenContainer, box, link } = componentStyles();
+  // \\const { childrenContainer, box, link } = componentStyles();
 
   return (
     <Box>
       <Link to='/'>
+      <Link to='/Login'>
+        <Button variant='outlined'>Login</Button>
+      </Link>
         <Button variant='outlined'>Home</Button>
       </Link>
       <Link to='/notifications'>

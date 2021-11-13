@@ -7,8 +7,12 @@ import { ColorThemeProvider } from "contexts/ColorThemeContext";
 
 // Components
 import LayoutComponent from "app/components/Layout";
+// firebase
+
 
 // Screens
+import LoginScreen from "app/components/Login"
+import RegisterScreen from "app/components/Register"
 import AboutScreen from "app/screens/About";
 import HomeScreen from "app/screens/Home";
 import NotFoundScreen from "app/screens/NotFound";
@@ -30,6 +34,8 @@ function App() {
       <Router>
         <LayoutComponent>
           <Switch>
+            <Route component = {RegisterScreen} path="/register" exact/>
+            <Route component = {LoginScreen} path="/login" exact/>
             <Route component={HomeScreen} path="/" exact />
             <Route component={AboutScreen} path="/about" exact />
             <Route component={ArchiveScreen} path="/archive" exact />
